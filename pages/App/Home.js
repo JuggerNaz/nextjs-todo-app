@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Note from "../components/Note";
+import Header from '../components/Header';
+import { useAuth0 } from "../../src/react-auth0-spa";
 
 class Home extends Component {
 
@@ -47,7 +49,7 @@ class Home extends Component {
 
     return (
       <div className="container">
-        <div className="header">Todo App</div>
+        <Header />
         {notes}
         <div className="button" onClick={this.addNote.bind(this)}>+</div>
         <input placeholder="Enter Notes" type="text" className="input"
